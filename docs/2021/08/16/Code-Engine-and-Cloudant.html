@@ -10,7 +10,7 @@
   <script type="module" src="https://1.www.s81c.com/common/carbon/web-components/tag/latest/notification.min.js"></script>
   
 
-  <link rel="icon" href="https://blog.cloudant.com/favicon.png">
+  <link rel="icon" href="https://emlaver.github.io/ghp/favicon.png">
 
   
 
@@ -38,7 +38,7 @@ bx-header {display:flex; background: #000;color:#fff;height: 3rem;width:100%}
 </style>
 
 
-<link rel="stylesheet" type="text/css" href="https://blog.cloudant.com/css/main.css?i=000" media="all">
+<link rel="stylesheet" type="text/css" href="https://emlaver.github.io/ghp/css/main.css?i=000" media="all">
 
 
 
@@ -53,18 +53,18 @@ bx-header {display:flex; background: #000;color:#fff;height: 3rem;width:100%}
     
     <meta property="og:type" content="article" />
     <meta property="og:title" content="Code Engine &amp; Cloudant">
-    <meta property="og:url" content="https://blog.cloudant.com/2021/08/16/Code-Engine-and-Cloudant.html" />
+    <meta property="og:url" content="https://emlaver.github.io/ghp/2021/08/16/Code-Engine-and-Cloudant.html" />
     <meta property="og:description" content="Running serverless services with IBM Cloud Code Engine" />
     <meta property="article:published_time" content="2021-08-16 06:00:00 &#43;0000 UTC" />
-    <meta property="og:site_name" content="Cloudant blog" />
+    <meta property="og:site_name" content="My New Hugo Site 2023" />
     <meta property="og:image" content="/img/amy-shamblen-h5yMpgOI5nI-unsplash.jpg" />
 
     
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:site" content="Cloudant blog" />
+    <meta name="twitter:site" content="My New Hugo Site 2023" />
     <meta name="twitter:title" content="Code Engine &amp; Cloudant" />
     <meta name="twitter:description" content="Running serverless services with IBM Cloud Code Engine" />
-    <meta name="twitter:creator" content="Cloudant blog" />
+    <meta name="twitter:creator" content="My New Hugo Site 2023" />
 
     
     <meta itemprop="name" content="Code Engine &amp; Cloudant">
@@ -91,17 +91,17 @@ bx-header {display:flex; background: #000;color:#fff;height: 3rem;width:100%}
 <body class="">
      
 <bx-skip-to-content href="#main-content" role="navigation" aria-label="Skip to main content"></bx-skip-to-content>
-<bx-header aria-label=" Cloudant blog" role="banner">
-  <bx-header-name href="https://blog.cloudant.com/" prefix=""> Cloudant blog</bx-header-name>
-  <bx-header-nav menu-bar-label=" Cloudant blog" role="navigation">
+<bx-header aria-label=" My New Hugo Site 2023" role="banner">
+  <bx-header-name href="https://emlaver.github.io/ghp/" prefix=""> My New Hugo Site 2023</bx-header-name>
+  <bx-header-nav menu-bar-label=" My New Hugo Site 2023" role="navigation">
     
         
           
-            <bx-header-nav-item active="" href="https://blog.cloudant.com/">Home</bx-header-nav-item>
+            <bx-header-nav-item active="" href="https://emlaver.github.io/ghp/">Home</bx-header-nav-item>
           
         
           
-            <bx-header-nav-item active="" href="https://blog.cloudant.com/search.html">Search</bx-header-nav-item>
+            <bx-header-nav-item active="" href="https://emlaver.github.io/ghp/search.html">Search</bx-header-nav-item>
           
         
     
@@ -142,7 +142,7 @@ bx-header {display:flex; background: #000;color:#fff;height: 3rem;width:100%}
 <p>So, let&rsquo;s jump right in. It should take you no more than an hour to read this post and complete the tutorial.</p>
 <h2 id="the-project-fruit-counter"style="display:inline">The Project: Fruit Counter</h2><a class="stealth" href="#the-project-fruit-counter">🔗</a><br>
 <p>Fruit counter is a web app that lets its visitors pick their favourite fruit from a list of options. Once they submit their choice, they can see the current running total of fruit favourites.</p>
-<p><img src="https://blog.cloudant.com/img/amy-shamblen-h5yMpgOI5nI-unsplash.jpg" alt="fruit"></p>
+<p><img src="https://emlaver.github.io/ghp/img/amy-shamblen-h5yMpgOI5nI-unsplash.jpg" alt="fruit"></p>
 <blockquote>
 <p>Photo by <a href="https://unsplash.com/photos/h5yMpgOI5nI">Amy Shamblen on Unsplash</a></p>
 </blockquote>
@@ -202,7 +202,7 @@ bx-header {display:flex; background: #000;color:#fff;height: 3rem;width:100%}
 <p><strong>index.html</strong>: This is the one and only page of the application and is using the <a href="https://vuejs.org/">Vue.js</a> framework. When it loads, it will show you the available fruit options.</p>
 <p>When you submit your choice it will make an HTTP POST request with your choice to the /fruit route of the application (see above). A successful return from the application will contain the running total of fruit choices (including yours), which will be displayed.</p>
 <p>If you navigate to the Cloudant console and find your database you will see some documents like this one:</p>
-<p><img src="https://blog.cloudant.com/img/codeengine1.jpg" alt="codeengine1"></p>
+<p><img src="https://emlaver.github.io/ghp/img/codeengine1.jpg" alt="codeengine1"></p>
 <p>As you can see, your choice of fruit was added with a timestamp. Cloudant created a unique ID for this document.</p>
 <h2 id="step-4-deploying-to-ibm-code-engine"style="display:inline">Step 4: Deploying to IBM Code Engine</h2><a class="stealth" href="#step-4-deploying-to-ibm-code-engine">🔗</a><br>
 <p>So far, so good; but as this is running locally, only you can pick your favourite fruit. Now we want the whole internet to choose their fruit as well — this is where Code Engine comes in.</p>
@@ -248,16 +248,16 @@ bx-header {display:flex; background: #000;color:#fff;height: 3rem;width:100%}
 <li>Click Create.</li>
 </ol>
 <p>You will see a message like this, telling you that your assets are being created:</p>
-<p><img src="https://blog.cloudant.com/img/codeengine2.jpg" alt="codeengine1"></p>
+<p><img src="https://emlaver.github.io/ghp/img/codeengine2.jpg" alt="codeengine1"></p>
 <p>When it is finished, you will see a Ready message:</p>
-<p><img src="https://blog.cloudant.com/img/codeengine3.png" alt="codeengine1"></p>
+<p><img src="https://emlaver.github.io/ghp/img/codeengine3.png" alt="codeengine1"></p>
 <p>Click on Open Application URL.</p>
 <p>You should see the fruit picker application on the web. Go ahead, pick your favourite fruit and submit. You should see the running total of fruit choices.</p>
 <p>If you refresh the page and submit another choice, you will see the relevant counter incrementing.</p>
 <h2 id="slow-start"style="display:inline">Slow start</h2><a class="stealth" href="#slow-start">🔗</a><br>
 <p>You may notice that the first time you visit the application URL (or after you haven&rsquo;t used it for a while) it takes a while to display. This is because Code Engine is creating and starting the first instance of your application there and then. After a period of inactivity, this instance is deprovisioned and the next visitor has to start again. This is very cost-effective (you only pay while the instances are up and running), but may not be practical for applications that need to respond in milliseconds even on the first request, like a business intelligence dashboard.</p>
 <p>You can modify the minimum (and maximum) number of instances in the Runtime section of the Cloud Engine dashboard:</p>
-<p><img src="https://blog.cloudant.com/img/codeengine4.jpg" alt="codeengine1"></p>
+<p><img src="https://emlaver.github.io/ghp/img/codeengine4.jpg" alt="codeengine1"></p>
 <p>If you set it to a minimum of one, there will always be at least one instance of your application ready to receive visitors, but you will eventually run out of free tier vCPU seconds and will start to pay for your deployment.</p>
 <h2 id="the-dockerfile"style="display:inline">The Dockerfile</h2><a class="stealth" href="#the-dockerfile">🔗</a><br>
 <p>There is one file in the project that we&rsquo;ve glossed over: the Dockerfile. For those familiar with the way containers work, this file needs no explanation. For those who are not, the Dockerfile is the &ldquo;recipe&rdquo; that is used to create the container that will host and run your application. The Dockerfile in this project is very simple — it says that the container should be created using a starting configuration (base image) that supports Node.js version 14; that it should run the application from a certain directory (/usr/src/app); that it needs to copy all the application files into that directory and install all the dependencies (npm install); that it should listen for traffic on port 8080; and, finally, that it should start the application by running the following command:</p>

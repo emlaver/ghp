@@ -10,7 +10,7 @@
   <script type="module" src="https://1.www.s81c.com/common/carbon/web-components/tag/latest/notification.min.js"></script>
   
 
-  <link rel="icon" href="https://blog.cloudant.com/favicon.png">
+  <link rel="icon" href="https://emlaver.github.io/ghp/favicon.png">
 
   
 
@@ -38,7 +38,7 @@ bx-header {display:flex; background: #000;color:#fff;height: 3rem;width:100%}
 </style>
 
 
-<link rel="stylesheet" type="text/css" href="https://blog.cloudant.com/css/main.css?i=000" media="all">
+<link rel="stylesheet" type="text/css" href="https://emlaver.github.io/ghp/css/main.css?i=000" media="all">
 
 
 
@@ -53,18 +53,18 @@ bx-header {display:flex; background: #000;color:#fff;height: 3rem;width:100%}
     
     <meta property="og:type" content="article" />
     <meta property="og:title" content="Using the Changes Feed">
-    <meta property="og:url" content="https://blog.cloudant.com/2022/01/21/Using-the-Cloudant-changes-feed.html" />
+    <meta property="og:url" content="https://emlaver.github.io/ghp/2022/01/21/Using-the-Cloudant-changes-feed.html" />
     <meta property="og:description" content="Best practice and pitfalls" />
     <meta property="article:published_time" content="2022-01-21 00:00:00 &#43;0000 UTC" />
-    <meta property="og:site_name" content="Cloudant blog" />
+    <meta property="og:site_name" content="My New Hugo Site 2023" />
     <meta property="og:image" content="/img/chris-lawton-5IHz5WhosQE-unsplash.jpg" />
 
     
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:site" content="Cloudant blog" />
+    <meta name="twitter:site" content="My New Hugo Site 2023" />
     <meta name="twitter:title" content="Using the Changes Feed" />
     <meta name="twitter:description" content="Best practice and pitfalls" />
-    <meta name="twitter:creator" content="Cloudant blog" />
+    <meta name="twitter:creator" content="My New Hugo Site 2023" />
 
     
     <meta itemprop="name" content="Using the Changes Feed">
@@ -91,17 +91,17 @@ bx-header {display:flex; background: #000;color:#fff;height: 3rem;width:100%}
 <body class="">
      
 <bx-skip-to-content href="#main-content" role="navigation" aria-label="Skip to main content"></bx-skip-to-content>
-<bx-header aria-label=" Cloudant blog" role="banner">
-  <bx-header-name href="https://blog.cloudant.com/" prefix=""> Cloudant blog</bx-header-name>
-  <bx-header-nav menu-bar-label=" Cloudant blog" role="navigation">
+<bx-header aria-label=" My New Hugo Site 2023" role="banner">
+  <bx-header-name href="https://emlaver.github.io/ghp/" prefix=""> My New Hugo Site 2023</bx-header-name>
+  <bx-header-nav menu-bar-label=" My New Hugo Site 2023" role="navigation">
     
         
           
-            <bx-header-nav-item active="" href="https://blog.cloudant.com/">Home</bx-header-nav-item>
+            <bx-header-nav-item active="" href="https://emlaver.github.io/ghp/">Home</bx-header-nav-item>
           
         
           
-            <bx-header-nav-item active="" href="https://blog.cloudant.com/search.html">Search</bx-header-nav-item>
+            <bx-header-nav-item active="" href="https://emlaver.github.io/ghp/search.html">Search</bx-header-nav-item>
           
         
     
@@ -128,7 +128,7 @@ bx-header {display:flex; background: #000;color:#fff;height: 3rem;width:100%}
   <p>A Cloudant database&rsquo;s changes feed&rsquo;s primary use-case is to power the replication of data from a source to a target database. The Cloudant replicator is built to handle the changes feed and performs the necessary checks to ensure data is copied accurately to its destination.</p>
 <p>There is a raw <a href="https://cloud.ibm.com/apidocs/cloudant#getchanges-changes">changes feed API</a> that can be used to consume a single database&rsquo;s changes but it must be used with care.</p>
 <p>The <code>_changes</code> API endpoint can be used in several ways and can output data in a variety of formats, but this article will focus on best practice and how to avoid some pitfalls when developing against the Changes API.</p>
-<p><img src="https://blog.cloudant.com/img/chris-lawton-5IHz5WhosQE-unsplash.jpg" alt="changes"></p>
+<p><img src="https://emlaver.github.io/ghp/img/chris-lawton-5IHz5WhosQE-unsplash.jpg" alt="changes"></p>
 <blockquote>
 <p>Photo by <a href="https://unsplash.com/photos/5IHz5WhosQE">Chris Lawton on Unsplash</a></p>
 </blockquote>
@@ -184,7 +184,7 @@ bx-header {display:flex; background: #000;color:#fff;height: 3rem;width:100%}
 <li>Copying data from source to target but ignoring deleted documents.</li>
 <li>Copying data but without index definitions (design documents).</li>
 </ul>
-<p>This <a href="https://blog.cloudant.com/2019/12/13/Filtered-Replication.html">blog post</a> describes how supplying a <code>selector</code> during replication makes easy work of these use cases.</p>
+<p>This <a href="https://emlaver.github.io/ghp/2019/12/13/Filtered-Replication.html">blog post</a> describes how supplying a <code>selector</code> during replication makes easy work of these use cases.</p>
 <p>The changes feed with an accompanying <code>selector</code> parameter is <em>not</em> the way to extract slices of data from the database on a routine basis. It should not be used as a means of performing operational queries against a database. Filtered changes are slow (the filter is applied to every changed document in turn, without the help of an index), much slower than creating a secondary index (such as a MapReduce view) and querying that view.</p>
 <h2 id="the-changes-feed-does-not-guarantee-time-ordering"style="display:inline">The changes feed does not guarantee time-ordering</h2><a class="stealth" href="#the-changes-feed-does-not-guarantee-time-ordering">🔗</a><br>
 <p>If the use case is:</p>

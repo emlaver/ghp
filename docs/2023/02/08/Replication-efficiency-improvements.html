@@ -10,7 +10,7 @@
   <script type="module" src="https://1.www.s81c.com/common/carbon/web-components/tag/latest/notification.min.js"></script>
   
 
-  <link rel="icon" href="https://blog.cloudant.com/favicon.png">
+  <link rel="icon" href="https://emlaver.github.io/ghp/favicon.png">
 
   
 
@@ -38,7 +38,7 @@ bx-header {display:flex; background: #000;color:#fff;height: 3rem;width:100%}
 </style>
 
 
-<link rel="stylesheet" type="text/css" href="https://blog.cloudant.com/css/main.css?i=000" media="all">
+<link rel="stylesheet" type="text/css" href="https://emlaver.github.io/ghp/css/main.css?i=000" media="all">
 
 
 
@@ -53,18 +53,18 @@ bx-header {display:flex; background: #000;color:#fff;height: 3rem;width:100%}
     
     <meta property="og:type" content="article" />
     <meta property="og:title" content="Replication Efficiency Improvements">
-    <meta property="og:url" content="https://blog.cloudant.com/2023/02/08/Replication-efficiency-improvements.html" />
+    <meta property="og:url" content="https://emlaver.github.io/ghp/2023/02/08/Replication-efficiency-improvements.html" />
     <meta property="og:description" content="How to make replication go faster" />
     <meta property="article:published_time" content="2023-02-08 00:00:00 &#43;0000 UTC" />
-    <meta property="og:site_name" content="Cloudant blog" />
+    <meta property="og:site_name" content="My New Hugo Site 2023" />
     <meta property="og:image" content="/img/vince-fleming-Vmr8bGURExo-unsplash.jpg" />
 
     
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:site" content="Cloudant blog" />
+    <meta name="twitter:site" content="My New Hugo Site 2023" />
     <meta name="twitter:title" content="Replication Efficiency Improvements" />
     <meta name="twitter:description" content="How to make replication go faster" />
-    <meta name="twitter:creator" content="Cloudant blog" />
+    <meta name="twitter:creator" content="My New Hugo Site 2023" />
 
     
     <meta itemprop="name" content="Replication Efficiency Improvements">
@@ -91,17 +91,17 @@ bx-header {display:flex; background: #000;color:#fff;height: 3rem;width:100%}
 <body class="">
      
 <bx-skip-to-content href="#main-content" role="navigation" aria-label="Skip to main content"></bx-skip-to-content>
-<bx-header aria-label=" Cloudant blog" role="banner">
-  <bx-header-name href="https://blog.cloudant.com/" prefix=""> Cloudant blog</bx-header-name>
-  <bx-header-nav menu-bar-label=" Cloudant blog" role="navigation">
+<bx-header aria-label=" My New Hugo Site 2023" role="banner">
+  <bx-header-name href="https://emlaver.github.io/ghp/" prefix=""> My New Hugo Site 2023</bx-header-name>
+  <bx-header-nav menu-bar-label=" My New Hugo Site 2023" role="navigation">
     
         
           
-            <bx-header-nav-item active="" href="https://blog.cloudant.com/">Home</bx-header-nav-item>
+            <bx-header-nav-item active="" href="https://emlaver.github.io/ghp/">Home</bx-header-nav-item>
           
         
           
-            <bx-header-nav-item active="" href="https://blog.cloudant.com/search.html">Search</bx-header-nav-item>
+            <bx-header-nav-item active="" href="https://emlaver.github.io/ghp/search.html">Search</bx-header-nav-item>
           
         
     
@@ -125,10 +125,10 @@ bx-header {display:flex; background: #000;color:#fff;height: 3rem;width:100%}
 
   </div>
   
-  <p>Cloudant&rsquo;s replication is a rock-solid protocol that allows a database&rsquo;s changes to be easily synced to a different database. This feature is used widely to create multi-region Cloudant <a href="https://blog.cloudant.com/2017/11/07/Cloudant-replication-topologies.html">topologies</a>, allowing dependent applications to survive a regional Cloud outage.</p>
+  <p>Cloudant&rsquo;s replication is a rock-solid protocol that allows a database&rsquo;s changes to be easily synced to a different database. This feature is used widely to create multi-region Cloudant <a href="https://emlaver.github.io/ghp/2017/11/07/Cloudant-replication-topologies.html">topologies</a>, allowing dependent applications to survive a regional Cloud outage.</p>
 <p>Cloudant has recently published a number of improvements that make replication even better than before - in our internal benchmarks we have seen replications speeds of 3x the previous version. Some of these features have been switched <em>off</em> by default, but may become the default behaviour in future releases.</p>
 <p>In this blog post we&rsquo;ll explore what has changed and how the new optional features can be switched on in your replications.</p>
-<p><img src="https://blog.cloudant.com/img/vince-fleming-Vmr8bGURExo-unsplash.jpg" alt="replication"></p>
+<p><img src="https://emlaver.github.io/ghp/img/vince-fleming-Vmr8bGURExo-unsplash.jpg" alt="replication"></p>
 <blockquote>
 <p>Photo by <a href="https://unsplash.com/photos/Vmr8bGURExo">Vince Fleming on Unsplash</a></p>
 </blockquote>
@@ -193,7 +193,7 @@ bx-header {display:flex; background: #000;color:#fff;height: 3rem;width:100%}
 </span></span><span style="display:flex;"><span>  <span style="color:#e6db74">&#34;use_bulk_get&#34;</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">true</span>,
 </span></span><span style="display:flex;"><span>  <span style="color:#e6db74">&#34;winning_revs_only&#34;</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">true</span>
 </span></span><span style="display:flex;"><span>}
-</span></span></code></pre></div><p>See <a href="https://blog.cloudant.com/2020/11/26/Repairing-a-Database-With-Conflicts.html">Repairing A Database With Conflicts</a></p>
+</span></span></code></pre></div><p>See <a href="https://emlaver.github.io/ghp/2020/11/26/Repairing-a-Database-With-Conflicts.html">Repairing A Database With Conflicts</a></p>
 <blockquote>
 <p>Note the <code>winning_revs_only</code> flag should only be used for one-off replications for the purposes of conflict repair. It is not suitable for general-purpose replication tasks.</p>
 </blockquote>
